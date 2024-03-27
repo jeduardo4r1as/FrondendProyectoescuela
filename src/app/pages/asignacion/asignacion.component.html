@@ -1,0 +1,60 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Acudientes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button">
+        Crear Acudiente
+      </button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id Asignacion</th>
+          <th>id materia</th>
+          <th>id grupo</th>
+          <th>id docente</th>
+          <th>id Anoelectivo</th>
+          <th>periodo inicial</th>
+          <th>periodo final</th>
+          <th>sede</th>
+
+          <th>
+            editar
+          </th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+          @for (asignacion of asignaciones; track asignacion.id_Asignacion) {
+            <tr >
+            <td>{{ asignacion.id_Asignacion }}</td>
+            <td>{{ asignacion.id_Materia }}</td>
+            <td>{{ asignacion.id_Grupo }}</td>
+            <td>{{ asignacion.id_Docente }}</td>
+            <td>{{ asignacion.id_Anoelectivo }}</td>
+            <td>{{ asignacion.p_inicial }}</td>
+            <td>{{ asignacion.p_final }}</td>
+            <td>{{ asignacion.sede }}</td>
+
+
+            <td>
+              <button type="button" name="editar"  class="btn btn-primary btn-sm">editar</button>
+            </td>
+            <td>
+              <button type="button" name="eliminar"  class="btn btn-danger btn-sm">eliminar</button>
+            </td>
+          </tr>
+          } @empty {
+            Empty list of acudiente
+          }
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

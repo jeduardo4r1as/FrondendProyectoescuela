@@ -1,0 +1,54 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Acudientes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button">
+        Crear Acudiente
+      </button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id Acudiente</th>
+          <th>nombre Completo</th>
+          <th>direccion</th>
+          <th>telefono</th>
+          <th>celular</th>
+          <th>parentesco</th>
+          <th>ocupacion</th>
+          <th>
+            editar
+          </th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+          @for (acudiente of acudientes; track acudiente.id_Acudiente) {
+            <tr >
+            <td>{{ acudiente.id_Acudiente }}</td>
+            <td>{{ acudiente.nombre_Completo }}</td>
+            <td>{{ acudiente.direccion }}</td>
+            <td>{{ acudiente.telefono }}</td>
+            <td>{{ acudiente.celular }}</td>
+            <td>{{ acudiente.parentesco }}</td>
+            <td>{{ acudiente.ocupacion }}</td>
+            <td>
+              <button type="button" name="editar"  class="btn btn-primary btn-sm">editar</button>
+            </td>
+            <td>
+              <button type="button" name="eliminar"  class="btn btn-danger btn-sm">eliminar</button>
+            </td>
+          </tr>
+          } @empty {
+            Empty list of acudiente
+          }
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
