@@ -4,7 +4,7 @@ export interface Asignacion {
   id_Grupo: number;
   id_Docente: number;
   id_Anoelectivo: number;
-  p_inicial: string;
-  p_final: string;
+  pInicial: string;
+  pFinal: string;
   sede: string;
 }

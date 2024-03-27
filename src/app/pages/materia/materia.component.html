@@ -1,1 +1,53 @@
-<p>materia works!</p>
+<div class="card border-primary mb-3">
+  <div class="card-header">Acudientes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button">
+        Crear Acudiente
+      </button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id materia</th>
+          <th>id area</th>
+          <th>materia nombre</th>
+          <th>numero horas</th>
+          <th>descripcion</th>
+          <th>
+            editar
+          </th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+          @for (materia of materias; track materia.id_Materia) {
+            <tr >
+            <td>{{ materia.id_Materia }}</td>
+            <td>{{ materia.id_Area }}</td>
+            <td>{{ materia.nombre }}</td>
+            <td>{{ materia.nHoras }}</td>
+            <td>{{ materia.descripcion }}</td>
+
+            <td>
+              <button type="button" name="editar"  class="btn btn-primary btn-sm">editar</button>
+            </td>
+            <td>
+              <button type="button" name="eliminar"  class="btn btn-danger btn-sm">eliminar</button>
+            </td>
+          </tr>
+          } @empty {
+            Empty list of acudiente
+          }
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+

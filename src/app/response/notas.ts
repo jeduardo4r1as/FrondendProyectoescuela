@@ -3,9 +3,9 @@ export interface Notas {
   id_Estudiante: number;
   id_Asignacion: number;
   nota_Cognitivo: number;
-  nota_Personal: number;
+  nota_Personal: any;
   nota_Social: number;
   ausencias: number;
-  nota_final: number;
+  nota_Final: number;
   nota_Recup: number;
 }

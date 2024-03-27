@@ -8,7 +8,7 @@ import { Asignacion } from '../../response/asignacion';
   templateUrl: './asignacion.component.html',
   styleUrl: './asignacion.component.css'
 })
-export class AsignacionComponent {
+export class AsignacionComponent implements OnInit{
 
   asignaciones: Asignacion[]=[];
 

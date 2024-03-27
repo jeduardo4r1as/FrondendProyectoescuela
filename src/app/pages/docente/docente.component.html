@@ -1,1 +1,60 @@
-<p>docente works!</p>
+<div class="card border-primary mb-3">
+  <div class="card-header">Acudientes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button">
+        Crear Docente
+      </button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id Docente</th>
+          <th>tipo documento</th>
+          <th>numero documento</th>
+          <th>nombre completo</th>
+          <th>direccion</th>
+          <th>telefono</th>
+          <th>email final</th>
+          <th>especializacion</th>
+
+          <th>
+            editar
+          </th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+          @for (docente of docentes; track docente.id_Docente) {
+            <tr >
+            <td>{{ docente.id_Docente }}</td>
+            <td>{{ docente.t_Docum }}</td>
+            <td>{{ docente.n_Docum }}</td>
+            <td>{{ docente.n_completo }}</td>
+            <td>{{ docente.direccion }}</td>
+            <td>{{ docente.telefono }}</td>
+            <td>{{ docente.email }}</td>
+            <td>{{ docente.especializacion }}</td>
+
+
+            <td>
+              <button type="button" name="editar"  class="btn btn-primary btn-sm">editar</button>
+            </td>
+            <td>
+              <button type="button" name="eliminar"  class="btn btn-danger btn-sm">eliminar</button>
+            </td>
+          </tr>
+          } @empty {
+            Empty list of acudiente
+          }
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

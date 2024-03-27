@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Estudiante } from '../../response/estudiante';
+import { EstudianteService } from '../../services/Estudiante/estudiante.service';
 
 @Component({
   selector: 'app-estudiante',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
   templateUrl: './estudiante.component.html',
   styleUrl: './estudiante.component.css'
 })
-export class EstudianteComponent {
+export class EstudianteComponent implements OnInit{
 
+
+
+  estudiantes: Estudiante[]=[];
+
+  constructor(private estudianteService:EstudianteService){}
+
+  ngOnInit() {
+    this.estudianteService.getEstudiante().subscribe(
+      estudiantes=>this.estudiantes=estudiantes
+    );
+    }
 }
