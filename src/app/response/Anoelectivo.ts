@@ -1,6 +1,6 @@
-export interface AnoLectivo {
-  id_Anoelectivo: number;
-  temporada: number;
-  periodo: number;
-  sede: string;
+export class AnoLectivo {
+  id_Anoelectivo!: number;
+  temporada!: number;
+  periodo!: number;
+  sede!: string;
 }

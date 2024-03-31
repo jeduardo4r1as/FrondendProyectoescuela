@@ -1,0 +1,19 @@
+<form [formGroup]="formularioAnoElectivo" >
+  <div>
+    <label for="id_Anoelectivo">ID Año Electivo</label>
+    <input type="number" formControlName="id_Anoelectivo" id="id_Anoelectivo">
+  </div>
+  <div>
+    <label for="temporada">Temporada</label>
+    <input type="number" formControlName="temporada" id="temporada">
+  </div>
+  <div>
+    <label for="periodo">Periodo</label>
+    <input type="number" formControlName="periodo" id="periodo">
+  </div>
+  <div>
+    <label for="sede">Sede</label>
+    <input type="text" formControlName="sede" id="sede">
+  </div>
+  <button type="submit">Guardar</button>
+</form>

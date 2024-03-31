@@ -9,6 +9,7 @@ import { EstudianteComponent } from './pages/estudiante/estudiante.component';
 import { GrupoComponent } from './pages/grupo/grupo.component';
 import { MateriaComponent } from './pages/materia/materia.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { FormacudienteComponent } from './pages/acudiente/formacudiente.component';
 
 
 
@@ -18,6 +19,12 @@ export const routes: Routes = [
   },
   {path:'Acudiente',
   component:AcudienteComponent
+  },
+  {path:'Acudiente/form',
+  component:FormacudienteComponent
+  },
+  {path:'Acudiente/form/:id',
+  component:FormacudienteComponent
   },
   {path:'Anoelectivo',
   component:AnoelectivoComponent

@@ -3,9 +3,11 @@
   <div class="card-body text-primary">
     <h5 class="card-title">Listado de clientes</h5>
     <div class="my-2 text-left">
-      <button class="btn btn-rounded btn-primary" type="button">
+      <a class="btn btn-rounded btn-primary" type="button" [routerLink]="['/Acudiente/form']">
+
         Crear Acudiente
-      </button>
+      </a>
+
     </div>
     <table class="table table-bordered table-striped">
       <thead>
@@ -36,10 +38,10 @@
             <td>{{ acudiente.parentesco }}</td>
             <td>{{ acudiente.ocupacion }}</td>
             <td>
-              <button type="button" name="editar"  class="btn btn-primary btn-sm">editar</button>
+              <button type="button" name="editar"   class="btn btn-primary btn-sm" [routerLink]="['/Acudiente/form',acudiente.id_Acudiente]">editar</button>
             </td>
             <td>
-              <button type="button" name="eliminar"  class="btn btn-danger btn-sm">eliminar</button>
+              <button type="button" name="eliminar"  class="btn btn-danger btn-sm" (click)="delete(acudiente)">eliminar</button>
             </td>
           </tr>
           } @empty {
